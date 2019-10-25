@@ -30,6 +30,18 @@ pipeline {
 		        sh 'mvn site'
 		    }
 		}
+		stage('Compile') {
+                 steps {
+                    sh 'mvn compile'
+                 }
+		}
+		stage('UnitTest') {
+                 steps {
+					sh 'mvn resources:testResources'
+					sh 'mvn compiler:testCompile'
+					sh 'mvn surefire:test'
+                 }
+		}
 	}
 	post {
 	    always {

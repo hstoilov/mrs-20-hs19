@@ -102,7 +102,7 @@ public class Movie {
     /**
      * @param aTitle set the title of this Movie.
      */
-    protected void setTitle(String aTitle) {
+    public void setTitle(String aTitle) {
         log.trace("entering setTitle");
         if (aTitle == null || aTitle.trim().isEmpty()) {
             log.trace("exiting setTitle throwing IllegalArgumentException");
@@ -140,7 +140,7 @@ public class Movie {
     /**
      * @param aReleaseDate set the date this Movie was released.
      */
-    protected void setReleaseDate(LocalDate aReleaseDate) {
+    public void setReleaseDate(LocalDate aReleaseDate) {
         log.trace("entering setReleaseDate");
         if (aReleaseDate == null) {
             log.trace("exiting setReleaseDate throwing IllegalStateException");

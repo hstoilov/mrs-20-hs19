@@ -16,6 +16,7 @@ import org.apache.commons.csv.CSVRecord;
 //import org.apache.commons.csv.CSVParser;
 
 import ch.fhnw.swc.mrs.api.MRSServices;
+import ch.fhnw.swc.mrs.model.Bill;
 import ch.fhnw.swc.mrs.model.Movie;
 import ch.fhnw.swc.mrs.model.PriceCategory;
 import ch.fhnw.swc.mrs.model.Rental;
@@ -130,6 +131,8 @@ public class SimpleMRSServices implements MRSServices {
     public boolean createRental(UUID userId, UUID movieId, LocalDate d) {
         User u = users.get(userId);
         Movie m = movies.get(movieId);
+        Bill b = new Bill(u.getFirstName(), u.getName(), u.getRentals());
+        System.out.println(b.getStatement());
         
         if (u != null && m != null && !m.isRented() && !d.isAfter(LocalDate.now())) {
             Rental r = new Rental(u, m, d);
