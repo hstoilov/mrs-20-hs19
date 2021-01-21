@@ -17,7 +17,7 @@
 		<log4j.version>2.12.0</log4j.version>
 		<slf4j.version>1.7.26</slf4j.version>
 		<commons-csv.version>1.7</commons-csv.version>
-		<jackson.version>2.9.9</jackson.version>
+		<jackson.version>2.12.1</jackson.version>
 		<sparkjava.version>2.8.0</sparkjava.version>
 		<dbunit.version>2.5.4</dbunit.version>
 		<dependency.locations.enabled>false</dependency.locations.enabled>
